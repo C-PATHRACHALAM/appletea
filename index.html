@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="appletea template">
+    <meta name="keywords" content="appletea tempalte ventage fun">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appletea</title>
+    <style>
+        @font-face {
+            font-family: blackfont;
+            src: url(font/Playball-Regular.ttf);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            font-variant: small-caps;
+            font-size: 2rem;
+        }
+
+        header {
+            background-image: url(image/header.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header>div:first-child {
+            display: grid;
+            grid-template-columns: 80%;
+            background-color: rgba(0, 0, 0, 0.593);
+            color: white;
+            justify-content: center;
+        }
+
+        header h3 {
+            margin: 5px 0 10px 0;
+        }
+
+        .row1 {
+            display: grid;
+            grid-template-columns: 30% 35%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+
+        }
+
+        .nav a {
+            color: white;
+            padding: 10px 15px;
+
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: small;
+            justify-content: space-between;
+        }
+
+        .nav a:hover {
+            background-color: rgb(49 49 49);
+        }
+
+        a:focus {
+            background-color: yellowgreen;
+        }
+
+        header>div:last-child {
+            text-align: center;
+            width: 40%;
+            margin-left: 37%;
+            padding-top: 50px;
+            height: 50vh;
+            font-family: blackfont, Arial, sans-serif;
+        }
+
+        header h2 {
+            font-size: 4rem;
+            font-weight: 100;
+            margin-bottom: 0;
+            text-shadow: 5px 5px 6px greenyellow;
+        }
+
+        header p {
+            color: rgb(253, 249, 249);
+            margin: 0 0 20px 0;
+            font-size: large;
+
+        }
+
+        header>div:last-child a {
+            background-color: rgb(255 194 13);
+            font-variant: small-caps;
+            color: rgb(9, 9, 9);
+            display: inline-block;
+            font-weight: bolder;
+            padding: 10px 20px;
+        }
+
+        header>div:last-child a:focus {
+            background-color: red;
+        }
+
+        header>div:last-child a:hover {
+            background-color: rgb(7, 234, 11);
+        }
+
+        .sec1,
+        .sec3>div,
+        .sec2>div,
+        .sec4>div {
+            width: 80%;
+            margin: auto;
+            padding-bottom: 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .sec1>div:first-child,
+        .row3,
+        .row5 {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .sec1 p {
+            color: rgb(103 101 102);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .sec1>div:last-child {
+            display: grid;
+            grid-template-columns: 33% 65%;
+            justify-content: space-between;
+        }
+
+        .sec1 h4 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-variant: small-caps;
+            margin-bottom: 0;
+            grid-column: span 2;
+        }
+
+        [type="range"] {
+            width: 100%;
+            border-radius: 0;
+            accent-color: black;
+            -webkit-appearance: none;
+            background: orange;
+            height: 10px;
+            margin-bottom: 10px;
+        }
+
+        .sec1 label {
+            font-size: 1.2rem;
+            margin: 0;
+            font-variant: small-caps;
+            font-weight: 300;
+        }
+
+        .sec2 {
+            background-color: rgb(255 194 13);
+        }
+
+        .sec2>div>div:first-child,
+        .sec3>div>div:first-child,
+        .sec3>div>div:first-child {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .row2 {
+            display: grid;
+            grid-template-columns: 23% 23% 30% 15%;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        .row2 input {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 10px 15px;
+            width: 100%;
+            font-size: medium;
+            font-variant: small-caps;
+            border: none;
+        }
+
+        .row2 [type="text"],
+        .row2 [type="email"] {
+            background-color: rgb(255 225 135);
+        }
+
+        .row2 [type="submit"] {
+            background-color: rgb(50 50 50);
+            color: rgb(223 223 223);
+        }
+
+        .row2 ::placeholder {
+            color: rgb(186 156 94);
+        }
+
+        .sec3 {
+            background-color: rgb(50 50 50);
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-bottom: 20px;
+        }
+
+        .row3 p,
+        .row5 p,
+        .sec5 p {
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .row4 {
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 21%);
+            justify-content: space-between;
+        }
+
+        .row4 img {
+            border-radius: 50%;
+            border: solid rgb(255 194 13) 10px;
+
+        }
+
+        .row4>div {
+            text-align: center;
+
+        }
+
+        .row4 h4 {
+            font-weight: 400;
+        }
+
+        .row4 p {
+            font-weight: 100;
+        }
+
+        .row4 input {
+            background-color: rgb(255 194 13);
+            border: 0;
+            font-size: 2rem;
+            font-weight: 400;
+            padding: 0 20px;
+            border-radius: 2px;
+        }
+
+        ul {
+            list-style: none;
+            margin: auto;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 75%;
+
+        }
+
+        li {
+            padding: 5px 30px;
+            border: solid 1px rgb(255 194 13);
+            border-radius: 3px;
+        }
+
+        .row5 {
+            padding-bottom: 30px;
+        }
+
+        .row6 {
+            display: grid;
+            grid-template-columns: repeat(3, 31%);
+            justify-content: space-between;
+            row-gap: 40px;
+            color: white;
+            padding-bottom: 20px;
+        }
+
+        .row6>div:first-child {
+            background-image: url(image/r1.avif);
+            background-position: center right;
+        }
+
+        .row6>div:nth-child(2) {
+            background-image: url(image/r7.avif);
+            background-position: center right;
+        }
+
+        .row6>div:nth-child(3) {
+            background-image: url(image/r3.avif);
+            background-position: center;
+        }
+
+        .row6>div:nth-child(4) {
+            background-image: url(image/r6.avif);
+
+        }
+
+        .row6>div:nth-child(5) {
+            background-image: url(image/r0.avif);
+
+        }
+
+        .row6>div:nth-child(6) {
+            background-image: url(image/r8.avif);
+
+        }
+
+        .row6>div:nth-child(7) {
+            background-image: url(image/r9.avif);
+            background-position: top left;
+        }
+
+        .row6>div:nth-child(8) {
+            background-image: url(image/boxing.avif);
+            background-position: center;
+        }
+
+        .row6>div:nth-child(9) {
+            background-image: url(image/girl.avif);
+            background-position: center right;
+        }
+
+        .row6>div>div:first-child {
+            height: 200px;
+        }
+
+        .row6 p {
+            margin: 10px 0 0 0;
+            font-weight: 300;
+        }
+
+        .row6 h4 {
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .row6>div>div:last-child {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.619);
+            display: inline-block;
+            width: 100%;
+        }
+
+        .row6>div:nth-child(5)>div {
+            visibility: hidden;
+        }
+
+        .sec5 {
+            background-image: url(image/footer.avif);
+            background-size: cover;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .sec5>div {
+            width: 55%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .sec5>div>div:first-child {
+            display: inline-block;
+            padding-bottom: 20px;
+
+        }
+
+        .row7 {
+            width: 50%;
+            padding-bottom: 20px;
+            margin: auto;
+        }
+
+        .row7 [type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 2px;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .row7 [type="submit"] {
+            padding: 10px 0px 8px;
+            text-align: center;
+            background-color: rgb(255 194 13);
+            border-radius: 2px;
+            border: none;
+            /* color: rgb(6, 6, 6); */
+            width: 30%;
+            font-size: 1rem;
+            margin: 20px;
+
+        }
+
+        .sec5>div>div>div {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .sec5 a {
+            color: white;
+            font-size: small;
+        }
+
+        .sec5 h6 {
+            font-weight: 400;
+        }
+
+        .sec5 p {
+            font-size: small;
+        }
+
+        @media(max-width:576px) {
+
+            .row1,
+            .sec1>div:last-child,
+            .row4,
+            .row6 {
+                grid-template-columns: 100%;
+            }
+
+            header h3 {
+                text-align: center;
+            }
+
+            header>div:last-child {
+                width: 100%;
+                margin-left: 0;
+                padding-top: 0;
+                height: 40vh;
+            }
+
+            .sec1>div:first-child,
+            .row3,
+            .row5 {
+                width: 100%;
+            }
+
+            .sec1 h4 {
+                grid-column: span 1;
+                text-align: center;
+            }
+
+            .row2 {
+                grid-template-columns: repeat(2, 47%);
+                row-gap: 15px;
+            }
+
+            .row4 {
+                row-gap: 25px;
+            }
+
+            ul {
+                flex-direction: column;
+
+            }
+
+            li {
+                margin-bottom: 20px;
+            }
+
+            .sec5>div,
+            .row7 {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="home">
+        <div>
+            <div class="row1">
+                <div>
+                    <h3>logo design</h3>
+                </div>
+                <div class="nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#team">Team</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact"> Contact</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Nice to meet you'</h2>
+            <p>
+                We just don't build websites, we build brands
+            </p>
+
+            <a href="#contact">get in touch</a>
+
+        </div>
+    </header>
+    <div class="sec1" id="about">
+        <div>
+            <h3>
+                about us
+            </h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore dolorum quisquam veritatis,
+                obcaecati nulla eius fugiat, dolore ut architecto porro iure aliquid, suscipit eaque sed vitae esse
+                in sunt ad.
+            </p>
+        </div>
+        <div>
+            <h4>
+                what can we do
+            </h4>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum temporibus pariatur
+                    provident tempore, perferendis dignissimos cumque reiciendis aliquid! Voluptatem, atque vero
+                    magni ex perspiciatis consectetur molestias provident tempora excepturi.
+                </p>
+            </div>
+            <div>
+                <div>
+                    <label for="v1">design</label>
+                    <input type="range" name="v1" id="v1" min="0" max="100" value="95">
+                </div>
+                <div>
+                    <label for="v2">coding</label>
+                    <input type="range" name="v2" id="v2" min="0" max="100" value="75">
+                </div>
+                <div>
+                    <label for="v3">marketing</label>
+                    <input type="range" name="v3" id="v3" min="0" max="100" value="55">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec2">
+        <div>
+            <div>
+                <h3>
+                    subscribe to our newsletter
+                </h3>
+            </div>
+            <div class="row2">
+
+                <input type="text" name="name1" id="fname" placeholder="first name">
+
+
+                <input type="text" name="name1" id="lname" placeholder="last name">
+
+                <input type="email" name="email" id="email1" placeholder="e-mail address">
+
+                <input type="submit" value="subscribe">
+
+            </div>
+        </div>
+    </div>
+    <div class="sec3" id="team">
+        <div>
+            <div>
+                <div class="row3">
+                    <h3>
+                        our team
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore dolorum quisquam veritatis,
+                        obcaecati nulla eius fugiat, dolore ut architecto porro iure aliquid, suscipit eaque sed vitae
+                        essein sunt ad.
+                    </p>
+                </div>
+            </div>
+            <div class="row4">
+                <div>
+                    <img src="image/face1.avif" alt="">
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aut corrupti doloremque,
+                        earum nulla labore consectetur ducimus id.</p>
+                    <input type="button" value="&#x2709">
+                </div>
+                <div>
+                    <img src="image/face2.avif" alt="">
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aut corrupti doloremque,
+                        earum nulla labore consectetur ducimus id.</p>
+                    <input type="button" value="&#x2709">
+                </div>
+                <div>
+                    <img src="image/face3.avif" alt="">
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aut corrupti doloremque,
+                        earum nulla labore consectetur ducimus id.</p>
+                    <input type="button" value="&#x2709">
+                </div>
+                <div>
+                    <img src="image/face4.avif" alt="">
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aut corrupti doloremque,
+                        earum nulla labore consectetur ducimus id.</p>
+                    <input type="button" value="&#x2709">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec4" id="portfolio">
+        <div>
+            <div>
+                <div class="row5">
+                    <h3>portfolio</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellendus suscipit ipsam
+                        impeditlabore alias amet a nisi quis dolorem beatae perferendis quidem cumque, neque, velit
+                        repellattotamcorrupti nesciunt.
+                    </p>
+                    <ul>
+                        <li>All</li>
+                        <li>Design</li>
+                        <li>Identity</li>
+                        <li>Potography</li>
+                        <li>Ilustration</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row6">
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div>
+                        <h4>Title</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec5">
+        <div>
+            <div>
+                <h3>
+                    contact
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati eligendi sit aspernatur iusto
+                    voluptatem? Eligendi doloribus corporis asperiores, animi quam quo in doloremque nesciunt veritatis.
+                    Sapiente quasi maiores eum error?
+                </p>
+            </div>
+            <div class="row7">
+                <input type="text" name="fname1" id="t1" placeholder="Enter your Name">
+                <input type="text" name="add" id="a1" placeholder="Enter your Address">
+                <input type="text" name="city" id="c" placeholder="Enter your City">
+                <input type="text" name="email" id="e" placeholder="Enter your Email Address">
+                <textarea name="area" id="a2" cols="30" rows="6" placeholder="Enter your Email Message"></textarea>
+                <input type="submit" value="SUBMIT">
+                <div>
+                    <a href="#home">Home</a> :
+                    <a href="#about">About</a> :
+                    <a href="#team">Team</a> :
+                    <a href="#portfolio">Portfolio</a> :
+                    <a href="#contact"> Contact</a>
+                </div>
+                <p>Copyright&copy;:LogoDesign 2020. All Rights Reserved</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
